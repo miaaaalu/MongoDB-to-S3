@@ -3,15 +3,17 @@
 
 ## Prepare 
 
-MongoDB
+### MongoDB
 ```powershell
 1. Install Mongodb https://www.mongodb.com/docs/manual/administration/install-community/
 2. Install MongoDB Compass https://www.mongodb.com/docs/compass/current/install/ 
 3. Connect to your Environment mongodb+srv://**************************/JR_KEYSTONE_UAT_20210428?retryWrites=true&w=majority 
 ```
-Python 3.8 for Lambda
+### Python 3.8 for Lambda
+Download [Layer](/python_packages.zip) for pre-installed packages. 
 ```powershell
 We’ll use pymongo for interacting with MongoDB and boto3 for uploading the files to S3
+
 1. Update Permissions for your IAM Role
 2. Update attached packages in your S3 as Layers
 ```
@@ -22,10 +24,7 @@ S3
 2. Create a Load folder
 ```
 
-## MongoDB to S3 
-We’ll use pymongo for interacting with MongoDB and boto3 for uploading the files to S3
-
-## Main Script 
+### Main Script 
 ```py
 import boto3
 import os
@@ -65,7 +64,7 @@ def lambda_handler(event, context):
 			print(error)
 ```
 
-## Reference 
+### Reference 
 - How to Use Python with MongoDB https://www.mongodb.com/languages/python 
 - How to fetch data from MongoDB using Python? https://www.geeksforgeeks.org/how-to-fetch-data-from-mongodb-using-python/ 
  
