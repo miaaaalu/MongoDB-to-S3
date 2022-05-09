@@ -9,21 +9,20 @@ MongoDB
 2. Install MongoDB Compass https://www.mongodb.com/docs/compass/current/install/ 
 3. Connect to your Environment mongodb+srv://**************************/JR_KEYSTONE_UAT_20210428?retryWrites=true&w=majority 
 ```
-Python 3.8 for Lambda
+Python 3.8 for AWS Lambda
+For pre-installed packages, download here.
 ```powershell
-We’ll use pymongo for interacting with MongoDB and boto3 for uploading the files to S3
+We’ll use pymongo for interacting with MongoDB and boto3 for uploading the files to S3.
+
 1. Update Permissions for your IAM Role
 2. Update attached packages in your S3 as Layers
 ```
 
-S3 
+AWS S3 
 ```powershell
 1. Create a Load Bucket 
 2. Create a Load folder
 ```
-
-## MongoDB to S3 
-We’ll use pymongo for interacting with MongoDB and boto3 for uploading the files to S3
 
 ## Main Script 
 ```py
