@@ -1,32 +1,3 @@
-# ETL with MongoDB Data in AWS Lambda
-![](/Mongodb-s3.jpg)
-
-## Prepare 
-
-MongoDB
-```powershell
-1. Install Mongodb https://www.mongodb.com/docs/manual/administration/install-community/
-2. Install MongoDB Compass https://www.mongodb.com/docs/compass/current/install/ 
-3. Connect to your Environment mongodb+srv://**************************/JR_KEYSTONE_UAT_20210428?retryWrites=true&w=majority 
-```
-Python 3.8 for Lambda
-```powershell
-We’ll use pymongo for interacting with MongoDB and boto3 for uploading the files to S3
-1. Update Permissions for your IAM Role
-2. Update attached packages in your S3 as Layers
-```
-
-S3 
-```powershell
-1. Create a Load Bucket 
-2. Create a Load folder
-```
-
-## MongoDB to S3 
-We’ll use pymongo for interacting with MongoDB and boto3 for uploading the files to S3
-
-## Main Script 
-```py
 import boto3
 import os
 from dotenv import load_dotenv
@@ -63,10 +34,3 @@ def lambda_handler(event, context):
 			print('{0}.json has been upload to S3'.format(table_name))
 		except Exception as error:
 			print(error)
-```
-
-## Reference 
-- How to Use Python with MongoDB https://www.mongodb.com/languages/python 
-- How to fetch data from MongoDB using Python? https://www.geeksforgeeks.org/how-to-fetch-data-from-mongodb-using-python/ 
- 
-
